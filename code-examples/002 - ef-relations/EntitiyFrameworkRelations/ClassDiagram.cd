@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EntitiyFrameworkRelations.Models.BasePlate" Collapsed="true">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BasePlate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntitiyFrameworkRelations.Models.Brick">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEABAAAAAAAAAAAAAEAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\Brick.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Color" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Availabilities" />
+      <Property Name="Tags" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EntitiyFrameworkRelations.Models.BrickAvailability" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAQAAAAAAAAABAAAIAAAAAABAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\BrickAvailability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntitiyFrameworkRelations.Models.MinifigHead" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MinifigHead.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntitiyFrameworkRelations.Models.Tag">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="Bricks" Type="EntitiyFrameworkRelations.Models.Brick" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="3.188" />
+        <Point X="9.5" Y="3.188" />
+        <Point X="9.5" Y="3.188" />
+        <Point X="8.25" Y="3.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bricks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EntitiyFrameworkRelations.Models.Vendor">
+    <Position X="3.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Vendor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Availabilities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="EntitiyFrameworkRelations.Models.Color" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>Models\Brick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
