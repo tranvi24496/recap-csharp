@@ -18,6 +18,7 @@ namespace VideoGameManager.Controllers
         {
             this.context = context;
         }
+
         [HttpGet]
         public IEnumerable<Game> GetAllGames() => context.Games;
 
@@ -35,7 +36,6 @@ namespace VideoGameManager.Controllers
 
             return game;
         }
-
 
         [HttpPut]
         public async Task<Game> Update([FromBody] Game game)

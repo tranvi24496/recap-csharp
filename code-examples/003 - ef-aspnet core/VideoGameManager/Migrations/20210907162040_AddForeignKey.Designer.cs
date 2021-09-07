@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VideoGameManager;
 
 namespace VideoGameManager.Migrations
 {
     [DbContext(typeof(VideoGameContext))]
-    partial class VideoGameContextModelSnapshot : ModelSnapshot
+    [Migration("20210907162040_AddForeignKey")]
+    partial class AddForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,8 +63,7 @@ namespace VideoGameManager.Migrations
                 {
                     b.HasOne("VideoGameManager.Entities.GameGenre", "Genre")
                         .WithMany("Games")
-                        .HasForeignKey("GameGenreId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("GameGenreId");
 
                     b.Navigation("Genre");
                 });

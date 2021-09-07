@@ -28,9 +28,12 @@ namespace VideoGameManager
         public void ConfigureServices(IServiceCollection services)
         {
             //Replace for VideoGameContextFactory in previous lession
-            services.AddDbContext<VideoGameContext>(options => options.UseSqlServer(
-                Configuration["ConnectionStrings:DefaultConnection"]
-                ));
+            services.AddDbContext<VideoGameContext>(options => options
+                .UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"])
+                
+                //Use to Log query to console
+                .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
+            );
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

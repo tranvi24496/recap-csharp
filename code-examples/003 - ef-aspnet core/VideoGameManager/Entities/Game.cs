@@ -10,6 +10,7 @@ namespace VideoGameManager.Entities
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public GameGenre Genre { get; set; }
+        public int? GameGenreId { get; set; }
         public int PersonRating { get; set; }
     }
 }
